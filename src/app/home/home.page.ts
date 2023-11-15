@@ -32,7 +32,7 @@ export class HomePage {
     ]),
     password: new FormControl('', [
       Validators.required,
-      Validators.min(5)
+      Validators.minLength(5)
     ]),
     remember: new FormControl(false)
   })

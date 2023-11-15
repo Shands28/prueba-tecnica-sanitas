@@ -31,11 +31,30 @@ describe('HomePage', () => {
       remember: false
     })
     expect(component.login.get('email')?.valid).toBeFalse()
+    expect(component.login.valid).toBeFalse()
     component.login.setValue({
       email: 'valid@valid.com',
       password: 'password',
       remember: false
     })
     expect(component.login.get('email')?.valid).toBeTruthy()
+    expect(component.login.valid).toBeTruthy()
+  })
+
+  it('should require a valid password', () => {
+    component.login.setValue({
+      email: 'valid@valid.com',
+      password: 'pass',
+      remember: false
+    })
+    expect(component.login.get('password')?.valid).toBeFalse()
+    expect(component.login.valid).toBeFalse()
+    component.login.setValue({
+      email: 'valid@valid.com',
+      password: 'password',
+      remember: false
+    })
+    expect(component.login.get('password')?.valid).toBeTruthy()
+    expect(component.login.valid).toBeTruthy()
   })
 });
