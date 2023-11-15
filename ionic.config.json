@@ -1,0 +1,7 @@
+{
+  "name": "prueba-tecnica-sanitas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
