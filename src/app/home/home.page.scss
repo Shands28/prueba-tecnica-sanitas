@@ -2,17 +2,16 @@
   display: grid;
   margin: auto;
   justify-items: center;
-  gap: 10px;
+  gap: 0.625em;
   background: #fff;
-  padding: 40px 30px 30px 30px;
+  padding: 2.5em 1.875em 1.875em 1.875em;
   width: min(100%, 450px);
 
   .img {
     width: 120px;
     aspect-ratio: 1;
-    background: center url("../../assets/logo.jpg");
-    background-size: cover;
-    background-position-x: 0;
+    object-fit: cover;
+    object-position: 0;
   }
 
   form {
@@ -24,12 +23,12 @@
   button {
     background: none;
     color: #000;
-    padding-inline: 50px;
+    padding-inline: 3.125em;
     box-shadow: none;
     border: 2px solid #4c8dff;
-    font-size: 18px;
+    font-size: 1.2rem;
     letter-spacing: 0;
-    margin-top: 30px;
+    margin-top: 1.875em;
   }
 
   .full-width {
@@ -39,7 +38,7 @@
   .slide-container {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .icon {
@@ -51,9 +50,10 @@
   .home-container {
     padding: 30px 0 0 0;
     grid-template-columns: 30px 1fr 30px;
+
     .img {
       position: absolute;
-      top: 50px;
+      top: 30px;
     }
 
     .page-title {

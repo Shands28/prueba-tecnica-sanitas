@@ -1,5 +1,5 @@
 <div class="home-container">
-  <div class="img place-column-2"></div>
+  <img class="img place-column-2" src="assets/logo.jpg"/>
   <h1 class="page-title place-column-2">Prueba técnica</h1>
   <form class="form place-column-2" [formGroup]="login">
     <mat-form-field class="full-width">
@@ -16,7 +16,7 @@
         caracteres)
       </mat-error>
     </mat-form-field>
-    <div class="full-width slide-container">
+    <div class="full-width slide-container" [style.margin-top]="attemptedLogin ? '1em' : ''">
       Recordar
       <mat-slide-toggle formControlName="remember" aria-label="Recordar email y contraseña"
                         color="primary"></mat-slide-toggle>
