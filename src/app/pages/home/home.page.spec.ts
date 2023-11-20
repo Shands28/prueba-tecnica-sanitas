@@ -2,7 +2,10 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {HomePage} from './home.page';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {By} from "@angular/platform-browser";
+import {TranslateModule} from "@ngx-translate/core";
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 describe('HomePage', () => {
   let component: HomePage;
@@ -10,11 +13,16 @@ describe('HomePage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      declarations: [HomePage],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
         BrowserAnimationsModule,
-      ],
-    })
-      .compileComponents();
+        TranslateModule.forRoot(),
+        ReactiveFormsModule,
+        FormsModule,
+        MatSlideToggleModule
+      ]
+    }).compileComponents();
     fixture = TestBed.createComponent(HomePage);
     component = fixture.componentInstance;
     fixture.detectChanges();

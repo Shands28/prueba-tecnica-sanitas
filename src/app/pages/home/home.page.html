@@ -1,0 +1,26 @@
+<div class="home">
+  <img class="home__img home--placeColumn2" src="../../../assets/logo.jpg" alt="{{'logo' | translate}}"/>
+  <h1 class="home__title home--placeColumn2">{{'title' | translate}}</h1>
+  <form class="home__form home--placeColumn2" [formGroup]="login">
+    <mat-form-field class="home__form--fullWidth">
+      <mat-icon matPrefix class="home__icon">person</mat-icon>
+      <mat-label>{{'emailLabel' | translate}}</mat-label>
+      <input matInput value="" type="email" formControlName="email">
+      <mat-error *ngIf="login.get('email')?.invalid && attemptedLogin">{{'emailError' | translate}}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="home__form--fullWidth">
+      <mat-icon matPrefix class="home__icon">lock</mat-icon>
+      <mat-label>{{'passwordLabel' | translate}}</mat-label>
+      <input matInput type="password" formControlName="password">
+      <mat-error *ngIf="login.get('password')?.invalid && attemptedLogin">
+        {{'passwordError' | translate}}
+      </mat-error>
+    </mat-form-field>
+    <div class="home__form--fullWidth home__slide" [style.margin-top]="attemptedLogin ? '1em' : ''">
+      {{'rememberLabel' | translate}}
+      <mat-slide-toggle formControlName="remember" aria-label="{{'rememberAriaLabel' | translate}}"
+                        color="primary"></mat-slide-toggle>
+    </div>
+  </form>
+  <button mat-fab extended="" (click)="logIn()" class="home__button home--gridSpan3">{{'login' | translate}}</button>
+</div>

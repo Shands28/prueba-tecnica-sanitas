@@ -1,0 +1,11 @@
+{
+  "title": "Prueba técnica",
+  "logo": "Logo",
+  "emailLabel": "Email",
+  "emailError": "Introduzca un email valido",
+  "passwordLabel": "Contraseña",
+  "passwordError": "Introduzca una contraseña valida (mínimo 5 caracteres)",
+  "rememberLabel": "Recordar",
+  "rememberAriaLabel": "Recordar email y contraseña",
+  "login": "Acceder"
+}
